@@ -1,0 +1,173 @@
+@font-face {
+    font-family: IranSans;
+    src: url(../fonts/IranSans.ttf);
+}
+@font-face {
+    font-family: Titr;
+    src: url(../fonts/Titr.ttf);
+}
+
+div.mainDiv{
+    padding :5px;
+    font-family: IranSans;
+}
+
+.copyright{
+    float: right;
+}
+.footer-menu {
+    float: left;
+    direction: rtl;
+}
+.text-right {
+    text-align: right;
+}
+.footer-area {
+    position: absolute;
+    width:100%;
+    bottom: 0;
+    background-size: cover;
+}
+
+.newsletter-row {
+    text-align: center;
+    background-color: #07314c;
+}
+.footer-bottom-area {
+    background: #2f2f2f;
+    padding-top: 14px;
+    padding-bottom: 8px;
+}
+
+.copyright > p {
+    color: #b7b4b4;
+    text-align: right;
+    direction: rtl;
+    font-size: 13px;
+    font-weight: 400;
+    margin-top: 3px;
+}
+.copyright > p, .footer-menu ul li a {
+    font-family: IranSans,sans-serif;
+}
+.copyright > p > a {
+    color: #0b82c6;
+}
+a.nav-link{
+    color:#213368;
+    font-size: 13px;
+}
+.footer-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a.nav-link:hover{
+    color: #0b82c6;
+}
+.footer-menu ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+.footer-menu ul li a {
+    display: block;
+    font-size: 15px;
+    color: #cccbcb;
+    line-height: 24px;
+
+}
+.footer-menu ul li:hover a{
+    color: #0b82c6;
+}
+
+.btn:focus, .btn:hover, a:focus, a:hover, button:focus, button:hover {
+    outline: 0;
+    text-decoration: none;
+}
+.fluid_header {
+    min-height: 0;
+    background: #FFF;
+    width: 100%;
+    top: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.dl-button dd:last-child, .fluid_header {
+    margin-bottom: 0;
+}
+.navbar-default {
+    background-color: #f8f8f8;
+    border-color: #e7e7e7;
+}
+.navbar-fixed-bottom, .navbar-fixed-top, .navbar-static-top {
+    -webkit-border-radius: 0;
+    border-radius: 0;
+}
+.navbar-static-top {
+    z-index: 1000;
+    border-width: 0 0 1px;
+}
+.navbar{
+    font-family: IranSans;
+}
+input.form-control::placeholder {
+    color: #6c757d;
+    font-size:12px;
+    text-align: right;
+}
+input.form-control:focus  {
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,0.16);
+    text-align: right;
+}
+.searchBTN{
+    margin-left: 3px;
+}
+.searchBTN:hover{
+    border: 1px solid #0b82c6;
+    color: #0b82c6;
+    margin-left: 3px;
+}
+.iconFooter{
+    font-size: 25px;
+}
+
+.contentDiv{
+    text-align: right;
+    font-size:15px;
+}
+@media (max-width: 991px) {
+    .searchDiv {
+        direction: rtl;
+    }
+    .menuDiv{
+        direction: ltr;
+    }
+}
+.newsDiv{
+    /*box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16);*/
+    text-align: right;
+    font-size:15px;
+    height: 400px;
+    overflow-y: auto;
+    scrollbar-color: inset 0 0 3px rgba(0, 0, 0, 0.3);
+    scrollbar-width: thin;
+}
+.newsDiv::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+.newsDiv::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+.newsDiv::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+}
+
+.loader{
+    display: none;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+}
