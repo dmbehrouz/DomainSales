@@ -1,26 +1,31 @@
 document.addEventListener("DOMContentLoaded", function (event) {
     let newsUrl = 'php/NewsService.php';
+    let loader = document.body.querySelector('.newsDiv img.loader');
+    let newsDiv = document.body.querySelector('.containerNews');
+
+    // News section service
     $.ajax({
         method: "GET",
         url: newsUrl,
         beforeSend: function (xhr) {
-            let loader = document.body.querySelector('.newsDiv img.loader');
             loader.style.display = 'block';
         },
         success: function (result) {
             if (result !== '') {
                 newsBox(JSON.parse(result));
-                let loader = document.body.querySelector('.newsDiv img.loader');
                 loader.style.display = 'none';
             }
         },
         error: function (error) {
             console.log("error", error);
+            loader.style.display = 'none';
+            let alert = '<div class="alert alert-danger text-center"  role="alert">خطادردریافت اطلاعات</div>';
+            newsDiv.innerHTML = alert;
         }
     });
 
+    // Generate news box
     function newsBox(content) {
-        let newsDiv = document.body.querySelector('.containerNews');
         let contentHtml = '';
         content.forEach(news => {
             let newsRow = `<div class="row" style="margin-top: 7px">
